@@ -1,0 +1,49 @@
+@media screen and (max-width:600px) {
+  body {
+    text-align: center;
+    background-image: url("D:/Internship 1/main-project/src/assets/images/canvaCart.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Georgia, serif;
+    width: 945px;
+    height: 1000px;
+  }
+  #my-body .fa-store {
+    font-size: 150px;
+  }
+  p {
+    font-size: 25px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  .container-fluid {
+    text-align: left;
+  }
+  fa-icon {
+    font-size: 150px;
+  }
+  .for-buttons {
+    padding-top: 800px;
+    color: white;
+  }
+  .for-buttons h3 {
+    color: black;
+    font-size: 35px;
+  }
+  .for-buttons .fa-store {
+    border-radius: 130px;
+    background-color: #FFB000;
+    padding: 21px;
+    opacity: 0.9;
+  }
+  .for-buttons .fa-store-left {
+    border-radius: 130px;
+    background-color: #FFB000;
+    padding: 21px 36px;
+    opacity: 0.9;
+  }
+  .for-buttons .row {
+    margin-bottom: 33px;
+  }
+}

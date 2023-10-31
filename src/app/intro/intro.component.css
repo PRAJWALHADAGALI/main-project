@@ -1,0 +1,56 @@
+@media screen and (max-width:600px) {
+  body {
+    text-align: center;
+    background-image: url("D:/Internship 1/main-project/src/assets/images/canvaCart.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Georgia, serif;
+    width: 930px;
+  }
+  #my-body .for-details {
+    margin-top: 530px;
+    background-color: #FFB000;
+    border-radius: 321px;
+    padding-left: 0;
+    width: 620px;
+    margin-left: 164px;
+    height: 620px;
+    padding-top: 50px;
+    border: 21px solid white;
+    opacity: 0.9;
+    color: white;
+  }
+  #my-body .fa-store {
+    font-size: 150px;
+  }
+  #my-body .container-fluid {
+    text-align: left;
+  }
+  #my-body .button-next {
+    padding-left: 45px;
+  }
+  #my-body .button-skip {
+    padding-left: 600px;
+  }
+  #my-body .div-button {
+    position: relative;
+    bottom: -280px;
+    display: flex;
+  }
+  #my-body button {
+    width: 145px;
+    border-radius: 27px;
+    height: 58px;
+    font-size: 38px;
+    opacity: 0.8;
+    background-color: #FFB000;
+    color: white;
+    border: 0;
+  }
+  #my-body h1 {
+    font-size: 50px;
+  }
+  #my-body p {
+    font-size: 23px;
+  }
+}
