@@ -1,14 +1,17 @@
+@media screen and (max-width:600px) {
+
 
   .navbar-brand{
-    margin-right: 445px;
+    margin-right: 0px;
   }
   img{
-    width: 390px;
+    width:75%;
   }
   .navbar{
-    height: 130px;
+    height: 8%;
   }
   .navbar-toggler-icon{
-    width: 60px;
-    height: 60px;
+  padding: 0px;
+  margin: 0px;
   }
+}

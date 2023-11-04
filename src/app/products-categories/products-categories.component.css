@@ -17,13 +17,8 @@
 
   .prod-details {
     padding-top: 100px;
+
   }
-
-
-
-
-
-
   .card-box{
     width: 50%;
     height: 50%;
@@ -35,5 +30,8 @@
     font-size: 10px;
     justify-content: space-between;
     padding: 1% 2%;
+  }
+  .for-buttons{
+      margin-top: 15%;
   }
 }

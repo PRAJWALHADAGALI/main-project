@@ -1,17 +1,10 @@
-<!-- <h3>Cart</h3>
-
-<div class="cart-item" *ngFor="let item of cartItems">
-  <span>{{ item.name }}</span>
-  <span>{{ item.price | currency }}</span>
-</div> -->
-
 
 <!-- For testing -->
-
-<section class="my-body">
-  <div class="">
-    <div class="card" *ngIf="count && !previewFlag">
-      <div class="row g-0 " *ngFor="let item of cartService.cartItems">
+    <app-header></app-header>
+<section class="my-body" *ngIf="isEmpty">
+  <div *ngFor="let item of cartItems">
+    <div class="card" >
+      <div class="row g-0 ">
         <div class="col col-xs-2 image">
           <img src="{{item.image}}" class="img-fluid rounded-start" alt="...">
         </div>
@@ -20,48 +13,23 @@
             <h6 class="card-title">{{item.name}}</h6>
             <div class="pricing">
               <div class="price">
-                <p class="card-text">Price:{{item.price | currency: 'USD': true}}</p>
+                <p class="card-text">Price:{{item.price | currency: 'INR': true}}</p>
               </div>
               <div class="Quantity">
-                <label>Quantity:</label>
-                <input type="number" name="" value="" max="1" min="1" [(ngModel)]="item.qty" (click)="chngQuantity()">
+                <label>Qty:{{item.qty}}</label>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div *ngIf="previewFlag" class="row">
-      <div class="col"> no items in the cart</div>
     </div>
-
-    <div class="card" *ngIf="count && !previewFlag">
-      <div class="row g-0 " *ngFor="let item of cartService.cartItems">
-        <div class="col col-xs-2 image">
-          <img src="{{item.image}}" class="img-fluid" alt="...">
-        </div>
-        <div class="col col-xs-10">
-          <div class="card-body">
-            <h6 class="card-title">{{item.name}}</h6>
-            <div class="pricing">
-              <div class="price">
-                <p class="card-text">Price:{{item.price | currency: 'USD': true}}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div *ngIf="previewFlag">
-      <div class="row mb-3" *ngFor="let item of cartService.cartItems">
-        <div class="col-md-4"> {{item.name}} </div>
-        <div class="col-md-3 ml-md-auto"> {{item.price | currency: 'USD': true}} </div>
-      </div>
-    </div>
-  </div>
-
-  <button *ngIf="!previewFlag" type="button" class="btn btn-success"  [routerLink]="['/address']">CheckOut</button>
+    <label class="total-cost">Total : {{totalCost | currency: 'INR': true}}</label>
+  <button type="button" class="btn btn-success"  [routerLink]="['/address']">CheckOut</button>
+</section>
+<section  *ngIf="!isEmpty">
+  <h5 class="cart-empty">Your cart is empty!</h5>
+  <button class="btn btn-outline-primary" [routerLink]="['/productsCategories']">Shop now</button>
 </section>
 
 <!-- For later -->

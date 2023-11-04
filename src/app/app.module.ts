@@ -22,6 +22,7 @@ import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
 import { HeadComponent } from './head/head.component';
 import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
+import { NewheaderComponent } from './newheader/newheader.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'head', component: HeadComponent },
   { path: 'address', component: AddressComponent },
   { path: 'payment', component: PaymentComponent },
+  { path: 'header', component: NewheaderComponent },
 ];
 
 @NgModule({
@@ -58,6 +60,7 @@ const routes: Routes = [
     HeadComponent,
     AddressComponent,
     PaymentComponent,
+    NewheaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +72,7 @@ const routes: Routes = [
   providers: [
     ProductService,
     CartService,
+    CartListComponent,
   ],
   bootstrap: [AppComponent],
 })

@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
 @Injectable()
 export class CartService {
 
-  private cartUpdates = new Subject<void>();
+  private cartUpdates = new Subject<string>();
   public cartUpdates$ = this.cartUpdates.asObservable();
   public cartItems: CartProduct[] = [];
 
@@ -14,15 +14,24 @@ export class CartService {
     return this.cartItems.reduce((c, t) => c + t.qty, 0);
   }
 
-  constructor() {}
+  constructor() { }
   add(product: Product) {
-    let existingItem:CartProduct = this.cartItems.find(item => item.id === product.id) as CartProduct;
-    if(existingItem){ existingItem.qty ++ } else {
-      (product as CartProduct).qty = 1;
-      this.cartItems.push(existingItem)
+    let existingItem: CartProduct | undefined = this.cartItems.find(item => item.id === product.id);
+    if (existingItem) {
+      existingItem.qty++;
+    } else {
+      const newCartItem: CartProduct = { ...product, qty: 1 };
+      this.cartItems.push(newCartItem);
+
     }
-    this.cartUpdates.next();
+    this.cartUpdates.next('Cart updated');
   }
+
+getItems(){
+  return this.cartItems;
+
+}
+
 
 
   //

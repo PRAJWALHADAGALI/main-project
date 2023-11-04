@@ -1,0 +1,25 @@
+<nav>
+  <a href="index.html">
+
+  </a>
+  <div>
+    <ul id="navbar" *ngIf="clicked" class="active">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">About</a></li>
+      <li><a href="index.html">Events</a></li>
+      <li><a href="index.html">Contact Us</a></li>
+      <li><a href="index.html">Organize an Event</a></li>
+    </ul>
+    <ul id="navbar" *ngIf="!clicked" class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">About</a></li>
+      <li><a href="index.html">Events</a></li>
+      <li><a href="index.html">Contact Us</a></li>
+      <li><a href="index.html">Organize an Event</a></li>
+    </ul>
+  </div>
+  <div id="mobile" ng-click="handleclick()">
+    <fa-icon id="bar" class="fa" *ngIf="clicked"  [icon]="faTimes" ></fa-icon>
+    <fa-icon id="bar" class="fa" *ngIf="!clicked"  [icon]="faBars"></fa-icon>
+  </div>
+</nav>

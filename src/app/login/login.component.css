@@ -1,4 +1,7 @@
 @media screen and (max-width:600px) {
+  body{
+    margin: 20px;
+  }
   .navbar .container-fluid {
     display: flex;
     text-align: left;
@@ -11,7 +14,7 @@
   }
   .for-registor button {
     width: 30rem;
-    height: 4rem;
+
     margin-top: 1rem;
     margin-bottom: 1rem;
   }

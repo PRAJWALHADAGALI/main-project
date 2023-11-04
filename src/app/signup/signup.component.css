@@ -1,3 +1,6 @@
+body{
+  margin: 20px;
+}
 .container-fluid{
   display: flex;
   text-align: left;
@@ -11,7 +14,6 @@
 }
 button{
   width: 290px;
-  height: 33px;
   margin-top: 10px;
   margin-bottom: 10px;
 }

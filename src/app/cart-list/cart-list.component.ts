@@ -21,46 +21,62 @@ import { Product, CartProduct } from '../types/products';
 //   }
 // }
 export class CartListComponent implements OnInit {
-  count: number = 0;
-  isOpen: boolean = false;
-  previewFlag: boolean = false;
-  inVoiceNo: number;
+  cartItems: CartProduct[] = [];
+  isEmpty: boolean = false;
+  totalCost:number=null;
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
-    this.cartService.cartUpdates$.subscribe(() => {
-      this.count = this.cartService.count;
-    });
-  }
+    this.cartItems = this.cartService.getItems();
+    for (let i = 0; i < this.cartItems.length; i++) {
+    this.totalCost = this.totalCost+this.cartItems[i].qty * this.cartItems[i].price;
 
-  openCart(): void {
-    this.isOpen = true;
-  }
-
-  closeCart(): void {
-    this.isOpen = false;
-    this.previewFlag = false;
-  }
-
-  removeProduct(item: CartProduct): void {
-    const itemIndex = this.cartService.cartItems.findIndex((element) => item.id === element.id);
-    if (itemIndex !== -1) {
-      this.cartService.cartItems.splice(itemIndex, 1);
-      this.count = this.cartService.count;
+    }
+    if(this.cartItems.length>0){
+      this.isEmpty=true;
     }
   }
+  // count: number = 0;
+  // isOpen: boolean = false;
+  // previewFlag: boolean = false;
+  // inVoiceNo: number;
+  //
+  // constructor(private cartService: CartService) {}
 
-  chngQuantity(): void {
-    this.count = this.cartService.count;
-  }
-
-  preview(): void {
-    this.previewFlag = true;
-    this.inVoiceNo = this.getRandomInt(23443, 23432555);
-  }
-
-  getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+  // ngOnInit() {
+  //   this.cartService.cartUpdates$.subscribe(() => {
+  //     this.count = this.cartService.count;
+  //   });
+  // }
+  //
+  // openCart(): void {
+  //   this.isOpen = true;
+  // }
+  //
+  // closeCart(): void {
+  //   this.isOpen = false;
+  //   this.previewFlag = false;
+  // }
+  //
+  // removeProduct(item: CartProduct): void {
+  //   const itemIndex = this.cartService.cartItems.findIndex((element) => item.id === element.id);
+  //   if (itemIndex !== -1) {
+  //     this.cartService.cartItems.splice(itemIndex, 1);
+  //     this.count = this.cartService.count;
+  //   }
+  // }
+  //
+  // chngQuantity(): void {
+  //   this.count = this.cartService.count;
+  // }
+  //
+  // preview(): void {
+  //   this.previewFlag = true;
+  //   this.inVoiceNo = this.getRandomInt(23443, 23432555);
+  // }
+  //
+  // getRandomInt(min, max) {
+  //   return Math.floor(Math.random() * (max - min + 1)) + min;
+  // }
 }
