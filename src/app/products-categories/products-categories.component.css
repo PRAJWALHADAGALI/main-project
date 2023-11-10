@@ -1,7 +1,6 @@
 @media screen and (max-width:600px) {
   body {
-    text-align: center;
-    margin: 7%;
+
   }
 
   .card {
@@ -20,8 +19,8 @@
 
   }
   .card-box{
-    width: 50%;
-    height: 50%;
+    width: 45%;
+    height: 45%;
     padding: 2% 1%;
     box-shadow: 1%;
   }
@@ -32,6 +31,12 @@
     padding: 1% 2%;
   }
   .for-buttons{
-      margin-top: 15%;
+      margin-top: 20%;
+      margin-left: 4%;
+      text-align: center;
+      padding-left: 3%;
+  }
+  .row{
+    width: 100%;
   }
 }

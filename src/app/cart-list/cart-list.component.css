@@ -1,6 +1,6 @@
 .my-body{
   margin: 5%;
-  margin-top: 15%;
+  margin-top: 20%;
 }
 img{
 width: 64%;
@@ -51,4 +51,7 @@ h5{
   position: absolute;
   bottom: 15%;
   margin-left: 35%;
+}
+.details{
+  padding: 3%;
 }

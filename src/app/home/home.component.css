@@ -1,16 +1,16 @@
-@media screen and (max-width:600px) {
-#my-body {
+@media only screen and (max-width:600px) {
+.my-body {
     text-align: center;
-    background-image: url("D:/Internship 1/main-project/src/assets/images/canvaCart.png");
+    background-image: url("D:/Internship 1/main-project/src/assets/images/canvaCart.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
     font-family: Georgia, serif;
-    width: 600px;
-    height: 1000px;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    margin-top:14% ;
+    padding: 1px;
   }
-  #my-body .fa-store {
-    font-size: 700%;
-  }
+
   p {
     font-size: 25px;
   }
@@ -21,28 +21,29 @@
     text-align: left;
   }
   fa-icon {
-    font-size: 150px;
+    font-size: 70px;
   }
   .for-buttons {
-    padding-top: 95%;
+    padding-top: 80%;
     color: white;
   }
   .for-buttons h3 {
     color: black;
-    font-size: 35px;
+    font-size: 100%;
+    padding-top: 5%;
   }
   .for-buttons .fa-store {
-    border-radius: 130px;
-    background-color: #FFB000;
-    padding: 21px;
-    opacity: 0.9;
+    border-radius: 100px;
+    background-image: linear-gradient(#940B92,#0002A1);
+    padding: 20px;
+    opacity: 0.8;
   }
   .for-buttons .fa-store-left {
-    border-radius: 130px;
-    background-color: #FFB000;
-    padding: 21px 36px;
-    opacity: 0.9;
-    font-size: 700%;
+    border-radius: 50%;
+    background-image: linear-gradient(#940B92,#0002A1);
+    padding: 18px 28px;
+    opacity: 0.8;
+    font-size: 70px;
   }
   .for-buttons .row {
     margin-bottom: 33px;

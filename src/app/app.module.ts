@@ -1,8 +1,8 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { RouterModule, Routes } from '@angular/router';
 import { IntroComponent } from './intro/intro.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductsCategoriesComponent } from './products-categories/products-categories.component';
@@ -17,12 +17,11 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { CartListComponent } from './cart-list/cart-list.component';
 import { CartService } from "./services/cart.service";
 import { ProductService } from "./services/product.service";
-import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
-import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
 import { HeadComponent } from './head/head.component';
 import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
 import { NewheaderComponent } from './newheader/newheader.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const routes: Routes = [
@@ -55,8 +54,6 @@ const routes: Routes = [
     TermsAndConditionsComponent,
     ProductsListComponent,
     CartListComponent,
-    SidenavListComponent,
-    ToolbarComponent,
     HeadComponent,
     AddressComponent,
     PaymentComponent,
@@ -67,6 +64,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HttpClientModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
