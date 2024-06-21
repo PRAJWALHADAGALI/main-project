@@ -1,0 +1,42 @@
+@media screen and (max-width:600px) {
+  body {
+
+  }
+
+  .card {
+    text-align: center;
+    border-radius: 0px;
+  }
+
+  .card-img-top {
+    padding: 6px;
+    width: 100%;
+    height: 120px;
+  }
+
+  .prod-details {
+    padding-top: 100px;
+
+  }
+  .card-box{
+    width: 45%;
+    height: 45%;
+    padding: 2% 1%;
+    box-shadow: 1%;
+  }
+  .card-body{
+    display: flex;
+    font-size: 10px;
+    justify-content: space-between;
+    padding: 1% 2%;
+  }
+  .for-buttons{
+      margin-top: 20%;
+      margin-left: 4%;
+      text-align: center;
+      padding-left: 3%;
+  }
+  .row{
+    width: 100%;
+  }
+}

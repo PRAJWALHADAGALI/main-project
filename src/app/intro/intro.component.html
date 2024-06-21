@@ -1,0 +1,42 @@
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <img src="https://thinkhighsoftwares.com/wp-content/uploads/2022/08/For-Dark-BG@3x.png" alt=""></a>
+    <div class="d-grid gap-2">
+    </div>
+  </div>
+</nav>
+<section class="my-body">
+    <div>
+      <div class="for-details" *ngIf="divs[0]">
+        <fa-icon class="fa-store" [icon]="faStore"></fa-icon>
+        <h1>Store access</h1>
+        <p>There are multiple ways <br>you can choose to create an online store. <br>Before you get started, sit back and list down all <br>the things you would want your <br>online business to have. </p>
+      </div>
+      <div class="for-details" *ngIf="divs[1]">
+        <fa-icon class="fa-store" [icon]="faBagShopping"></fa-icon>
+        <h1>My products</h1>
+        <p>There are multiple ways <br>you can choose to create an online store. <br>Before you get started, sit back and list down all <br>the things you would want your <br>online business to have. </p>
+      </div>
+      <div class="for-details" *ngIf="divs[2]">
+        <fa-icon class="fa-store" [icon]="faCartShopping"></fa-icon>
+        <h1>My cart</h1>
+        <p>There are multiple ways <br>you can choose to create an online store. <br>Before you get started, sit back and list down all <br>the things you would want your <br>online business to have. </p>
+      </div>
+      <div class="for-details" *ngIf="divs[3]">
+        <fa-icon class="fa-store" [icon]="faUser"></fa-icon>
+        <h1>My orders</h1>
+        <p>There are multiple ways <br>you can choose to create an online store. <br>Before you get started, sit back and list down all <br>the things you would want your <br>online business to have. </p>
+      </div>
+    </div>
+
+  <div class="for-skip">
+    <div class="div-button">
+      <div class="button-next">
+        <button (click)="showNextDiv()" type="button" name="button">next</button>
+      </div>
+      <div class="button-skip">
+        <button (click)="goToHome()" type="button" name="button">skip</button>
+      </div>
+    </div>
+  </div>
+</section>

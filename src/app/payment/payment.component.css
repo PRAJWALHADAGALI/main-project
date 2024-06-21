@@ -1,0 +1,30 @@
+.my-body{
+  margin: 5%;
+}
+button{
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+  height: 7%;
+}
+label{
+  padding-top: 5%;
+}
+.form-row{
+  margin: 0px;
+}
+.place{
+  padding: 0px;
+}
+.place-state{
+  padding-left: 0px;
+}
+.form-check-input{
+  margin-top: 7%;
+}
+.container-fluid a{
+  font-size: 15px;
+}
+.container-fluid a{
+  font-size: 15px;
+}

@@ -1,0 +1,35 @@
+.card-img-top{
+  width: 100%;
+  height: 8rem;
+  text-align: center;
+  border-radius: 0px;
+}
+.card{
+  box-shadow: 1.5px 1.5px 1.5px 1.5px #888;
+  border-radius: 0px;
+}
+.card-body{
+  padding: 0px;
+  border-radius: 0px;
+}
+button{
+  width: 100%;
+  border-radius: 0px;
+}
+h6{
+  text-align: center;
+}
+.my-body{
+  padding: 5%;
+  margin-top: 15%;
+  padding-right: 0px;
+}
+.card-box{
+  margin: 2% 0%;
+  border-radius: 0px;
+}
+.pricing{
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 5%;
+}

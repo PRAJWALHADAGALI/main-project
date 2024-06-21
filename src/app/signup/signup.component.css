@@ -1,0 +1,62 @@
+body{
+  margin: 20px;
+}
+.container-fluid{
+  display: flex;
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 112px;
+
+}
+.for-registor{
+  text-align: center;
+  margin-top: 20px;
+}
+button{
+  width: 96%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h4{
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.shop-logo{
+  margin-top: 150px;
+  text-align: center;
+}
+.shop-logo fa-icon{
+  font-size: 55px;
+}
+h2{
+  font-size: 25px;
+}
+.for-form{
+  text-align: center;
+}
+.for-box input {
+  border: 0px;
+  border-bottom: 1px solid black;
+  width: 325px;
+  height: 48px;
+}
+.for-check{
+  text-align: left;
+}
+.for-registor p{
+  color: #5272F2;
+  text-decoration: underline;
+}
+.symbols{
+  justify-content: space-between;
+}
+
+.symbols fa-icon{
+  font-size: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
+  }
+  .symbols p{
+    margin-top: 20px;
+  }

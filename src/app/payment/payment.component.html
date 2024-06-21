@@ -1,0 +1,44 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a [routerLink]="['/address']" class="navbar-brand" href="#">
+      < Back</a>
+  </div>
+</nav>
+<section class="my-body">
+  <div class="haeading">
+    <h3>Payment</h3>
+  </div>
+  <div class="address">
+    <form>
+      <div class="form-row">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Card Number</label>
+        <input type="text" class="form-control" id="inputAddress">
+      </div>
+      <div class="form-row row col-12 col-xs-12">
+        <div class="col-6 col-xs-6 form-group place-state">
+          <label for="inputState">Valid Untill</label>
+          <input type="text" class="form-control inputState" id="inputState">
+        </div>
+        <div class="col-6 col-xs-6 form-group place">
+          <label for="inputZip">CVV</label>
+          <input type="text" class="form-control inputZip" id="inputZip">
+        </div>
+        <div class="col-12 col-xs-12 form-group place">
+          <label for="inputCity">Card Holder Name</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Save card details
+            </label>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">PAY NOW</button>
+    </form>
+  </div>
+</section>

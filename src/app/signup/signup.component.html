@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">  <img src="https://thinkhighsoftwares.com/wp-content/uploads/2022/08/For-Dark-BG@3x.png" alt=""></a>
+    <div class="d-grid gap-2">
+</div>
+  </div>
+</nav>
+<div class="shop-logo">
+  <fa-icon [icon]="faUserPlus" class="fa-shop">
+
+  </fa-icon>
+</div>
+<div class="for-form">
+  <form class="" action="index.html" method="post">
+    <div class="for-box">
+      <input class="box" type="text" name="name" value="" placeholder="Name"> <br>
+      <input class="box" type="text" name="phone" value="" placeholder="Phone"> <br>
+      <input class="box" type="text" name="email" value="" placeholder="Email Address"> <br>
+      <input class="box" type="text" name="password" value="" placeholder="Password">
+    </div>
+
+    <div class="for-registor">
+      <button [routerLink]="['/login']" class="btn btn-lg btn-primary login-btn" type="button">Signup</button> <br>
+    </div>
+    <div class="other-opt">
+      <h4>Or Sign up with</h4>
+      <div class="symbols">
+        <a href="#">  <fa-icon [icon]="faFacebook" class="fa-shop">
+
+          </fa-icon></a>
+      <a href="#">  <fa-icon [icon]="faTwitter" class="fa-shop">
+
+        </fa-icon></a>
+      <a href="#">  <fa-icon [icon]="faGoogle" class="fa-shop">
+
+        </fa-icon></a>
+        <p>Existing User? <a href="#" [routerLink]="['/login']">Login</a></p>
+
+      </div>
+    </div>
+  </form>
+</div>
+
+
+  </body>
+</html>

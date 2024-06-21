@@ -1,0 +1,22 @@
+.navbar .container-fluid {
+  display: flex;
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 112px;
+}
+.for-registor {
+  text-align: center;
+  margin-top: 45%;
+}
+.for-registor button {
+  width: 96%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.shop-logo {
+  margin-top: 45%;
+  text-align: center;
+}
+.shop-logo fa-icon {
+  font-size: 55px;
+}

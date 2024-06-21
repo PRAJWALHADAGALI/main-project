@@ -1,0 +1,30 @@
+      <app-header></app-header>
+  <section class="my-body">
+    <div class="symbol-cont">
+      <div class="for-buttons">
+        <div class="row">
+          <div class="col col-lg-6 col-md-6 col-sm-6 symbol-class">
+            <fa-icon class="fa-store" [icon]="faStore"></fa-icon>
+            <h3>Store Access</h3>
+          </div>
+          <div [routerLink]="['/productsCategories']" class="col col-lg-6 col-md-6 col-sm-6 symbol-class">
+            <fa-icon  class="fa-store-left" [icon]="faBagShopping"></fa-icon>
+
+            <h3>Find My Products</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div [routerLink]="['/cart']" class="col col-lg-6 col-md-6 col-sm-6 symbol-class">
+            <fa-icon class="fa-store" [icon]="faCartShopping"></fa-icon>
+
+            <h3>My Cart</h3>
+          </div>
+          <div [routerLink]="['/myorders']" class="col col-lg-6 col-md-6 col-sm-6 symbol-class">
+            <fa-icon class="fa-store-left" [icon]="faUser"></fa-icon>
+
+            <h3>My Orders</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

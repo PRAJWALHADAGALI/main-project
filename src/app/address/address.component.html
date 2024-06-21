@@ -1,0 +1,40 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a [routerLink]="['/cart']" class="navbar-brand" href="#">
+      < Back</a>
+  </div>
+</nav>
+<section class="my-body">
+  <div class="haeading">
+    <h3>Address</h3>
+  </div>
+  <div class="address">
+    <form>
+    <div class="form-row">
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Street 1</label>
+      <input type="text" class="form-control" id="inputAddress">
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2">Street 2</label>
+      <input type="text" class="form-control" id="inputAddress2">
+    </div>
+    <div class="form-row row col-12 col-xs-12">
+      <div class="col-12 col-xs-12 form-group place">
+        <label for="inputCity">City</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-7 col-xs-7 form-group place-state">
+        <label for="inputState">State</label>
+        <input type="text" class="form-control inputState" id="inputState">
+      </div>
+      <div class="col-5 col-xs-5 form-group place">
+        <label for="inputZip">PIN</label>
+        <input type="text" class="form-control inputZip" id="inputZip">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success" [routerLink]="['/payment']">NEXT</button>
+  </form>
+  </div>
+</section>

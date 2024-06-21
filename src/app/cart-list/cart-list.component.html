@@ -1,0 +1,93 @@
+<!-- For testing -->
+    <app-header></app-header>
+<section class="my-body" *ngIf="isEmpty">
+  <div *ngFor="let item of cartItems">
+    <div class="card" >
+      <div class="row g-0 ">
+        <div class="col col-xs-2 image">
+          <img src="{{item.image}}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col col-xs-10 details">
+          <div class="card-body">
+            <h6 class="card-title">{{item.name}}</h6>
+            <div class="pricing">
+              <div class="price">
+                <p class="card-text">Price:{{item.price | currency: 'INR': true}}</p>
+              </div>
+              <div class="Quantity">
+                <label>Qty:{{item.qty}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <label class="total-cost">Total : {{totalCost | currency: 'INR': true}}</label>
+  <button type="button" class="btn btn-success"  [routerLink]="['/address']">CheckOut</button>
+</section>
+<section  *ngIf="!isEmpty">
+  <h5 class="cart-empty">Your cart is empty!</h5>
+  <button class="btn btn-outline-primary" [routerLink]="['/productsCategories']">Shop now</button>
+</section>
+
+<!-- For later -->
+
+<!-- <div class="container">
+  <div class="modal" [ngClass]="{'show':isOpen}" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header row">
+          <ng-container *ngIf="!previewFlag">
+            <div class="col-md-4">
+              <h5 class="modal-title"> Items in Cart</h5>
+            </div>
+            <div class="col-md-2 offset-md-2">
+              <h5 class="modal-title">Quantity</h5>
+            </div>
+          </ng-container>
+          <div *ngIf="previewFlag">
+            <div>
+              <h5 class="modal-title">CheckOut Details</h5>
+            </div>
+            <div>
+              <div class="col-md-2 offset-md-2">
+                <h6> Invoice Number</h6>
+              </div>
+              <div class="col-md-3 ml-md-auto">
+                <h6>{{inVoiceNo}}</h6>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="close" (click)="closeCart()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="count && !previewFlag">
+            <div class="row mb-3" *ngFor="let item of cartService.cartItems">
+              <div class="col-md-4"> {{item.name}} {{item.price | currency: 'USD': true}}</div>
+              <div class="col-md-2 offset-md-2"> <input type="number" name="quantity" min="1" max="5" [(ngModel)]="item.qty" (click)="chngQuantity()"></div>
+              <div class="col-md-3 ml-md-auto"><button (click)="removeProduct(item)">Delete</button></div>
+            </div>
+          </div>
+          <div *ngIf="!count && previewFlag" class="row">
+            <div class="col"> no items in the cart</div>
+          </div>
+          <div *ngIf="previewFlag">
+  <div class="row mb-3" *ngFor="let item of cartService.cartItems">
+    <div class="col-md-4"> {{item.name}} </div>
+    <div class="col-md-3 ml-md-auto"> {{item.price | currency: 'USD': true}} </div>
+  </div>
+</div>
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" (click)="closeCart()">Close</button>
+          <button *ngIf="!previewFlag" type="button" class="btn btn-primary" (click)="preview()">CheckOut</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

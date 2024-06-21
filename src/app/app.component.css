@@ -1,0 +1,71 @@
+@media screen and (max-width:600px) {
+  #my-body {
+    text-align: center;
+    /* background-image: url("./assets/canvaCart.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Georgia, serif;
+    width: 900px;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .for-details {
+    margin-top: 530px;
+    background-color: #FFB000;
+    border-radius: 321px;
+    padding-left: 0px;
+    width: 620px;
+    margin-left: 164px;
+    height: 620px;
+    padding-top: 50px;
+    border: 21px solid white;
+    opacity: 0.9;
+    color: white;
+  }
+  .fa-store {
+    font-size: 175px;
+  }
+  .container-fluid {
+    text-align: left;
+  }
+  .think-head {
+    font-size: 30px;
+    padding: 0px;
+    color: #C70039;
+  }
+  .soft-head {
+    padding: 0px;
+    color: #C70039;
+  }
+  button {
+    width: 145px;
+    border-radius: 27px;
+    height: 58px;
+    font-size: 38px;
+    opacity: 0.8;
+    background-color: #FFB000;
+    color: white;
+    border: 0px;
+  }
+  .button-next{
+
+   padding-left: 45px;
+  }
+  .button-skip{
+
+    padding-left: 600px;
+  }
+  .div-button {
+    position: relative;
+    bottom: -280px;
+    display: flex;
+  }
+
+}
