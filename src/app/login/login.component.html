@@ -12,10 +12,24 @@
 </fa-icon>
 </div>
 <div class="for-form">
-<form class="" action="index.html" method="post">
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
   <div class="for-box">
-    <input class="box" type="text" name="" value="" placeholder="Email Address"> <br>
-    <input class="box" type="text" name="" value="" placeholder="Password">
+    <input class="box" type="text" name="" value="" placeholder="Email Address" formControlName = "email"> <br>
+    <small *ngIf="email.invalid && email.dirty || email.touched" class="block p-error">
+      <div *ngIf="email.errors?.['required']">
+        Email is required
+      </div>
+      <div *ngIf="email.errors?.['email']">
+        Email should be valid
+      </div>
+    </small>
+    <input class="box" type="text" name="" value="" placeholder="Password" formControlName="password">
+    <small *ngIf=" password.dirty || password.touched" class="block p-error">
+      <div *ngIf="password.errors?.['required']">
+        password is required
+      </div>
+
+    </small>
   </div>
   <div class="for-check">
         <input class="check" type="checkbox" name="" value="">
@@ -23,7 +37,7 @@
   </div>
 
   <div class="for-registor">
-    <button [routerLink]="['/']" class="btn btn-primary btn-lg login-btn" type="button">Login</button>
+    <button [disabled]="loginForm.invalid" class="btn btn-primary btn-lg login-btn" type="button">Login</button>
     <br>
     <button [routerLink]="['/signup']" class="btn btn-lg btn-outline-primary login-btn" type="button">Signup</button> <br>
     <p>Forgot password?</p>

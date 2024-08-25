@@ -40,6 +40,7 @@
     "passport": "^0.7.0",
     "passport-local-mongoose": "^8.0.0",
     "popper.js": "^1.16.1",
+    "primeng": "^17.18.9",
     "rxjs": "~7.8.0",
     "rxjs-observable": "^0.0.7",
     "tslib": "^2.3.0",

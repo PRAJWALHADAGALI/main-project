@@ -1,17 +1,28 @@
-    <app-header></app-header>
+<app-header></app-header>
 <section class="my-body">
   <div class="row col-12 col-xs-12">
     <div class="col-6 col-xs-6 card-box" *ngFor="let item of selectedCatList">
       <div class="card">
-      <img class="card-img-top" src="{{item.image}}">
+        <img class="card-img-top" src="{{item.image}}">
         <div class="card-body">
           <h6 class="card-text">{{item.name}}</h6>
           <div class="pricing">
             <label>Price:</label>
-            <p>{{ item.price | currency: 'INR': true}}</p>
+            <p>{{ item.price | currency: 'INR': true }}</p>
           </div>
 
-          <button (click)="addToCart(item)" class="btn btn-success">Add to Cart</button>
+          <button (click)="addToCart(item)" class="btn btn-success" [disabled]="isNoStock(item.id)">Add to Cart</button>
+
+          <div class="stocking">
+            <!-- Show only when stock is low (less than 5 and greater than 0) -->
+            <label class="text-success" *ngIf="isLowStock(item.id) && !isNoStock(item.id)">
+              Only {{ productQuantities[item.id] }} items left!
+            </label>
+            <!-- Show when the item is out of stock (quantity is 0) -->
+            <label class="text-danger" *ngIf="isNoStock(item.id)">
+              Item out of stock!
+            </label>
+          </div>
         </div>
       </div>
     </div>

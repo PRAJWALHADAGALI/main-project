@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { getAllProducts, getProductsByCategory } = require('./getData');
+const { getAllProducts, getProductsByCategory, getProductQty, deleteproductQty } = require('./getData');
 
-// Route to get all products
 router.get('/products', getAllProducts);
 
-// Route to get products by category
 router.get('/products/category/:categoryId', getProductsByCategory);
+
+router.get('/products/get-qty/:id', getProductQty);
+
+router.put('/products/delete-qty/:id',deleteproductQty);
 module.exports = router;

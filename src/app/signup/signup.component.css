@@ -60,3 +60,6 @@ h2{
   .symbols p{
     margin-top: 20px;
   }
+  small{
+    color:red;
+  }

@@ -1,11 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 3000;
-const db = require('./database');
+const port = 3300;
+const db = require('./database2');
 
-const routes = require('./routes/index');
-
+const routes = require('./userroutes/index');
 const corsOptions = {
   origin: 'http://localhost:4200',
   optionsSuccessStatus: 200

@@ -69,4 +69,8 @@
   .for-terms a{
     padding: 10%;
   }
+  small{
+    text-align:center;
+    color: red;
+  }
 }

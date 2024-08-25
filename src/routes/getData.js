@@ -21,7 +21,33 @@ const getProductsByCategory = async (req, res) => {
   }
 };
 
+const getProductQty = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const { results } = await db.query('SELECT qty FROM products WHERE id = ?', [id]);
+    res.send(results);
+  } catch (error) {
+    console.error('Error fetching product qty:', error);
+    res.status(500).send('Error fetching product qty');
+  }
+};
+
+const deleteproductQty = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const qtyToDelete = req.query.qty;
+    const { results } = await db.query('UPDATE products SET qty = qty - ? WHERE id = ?', [qtyToDelete, id]);
+    res.send(results);
+  } catch (error) {
+    console.error('Error deleting product qty', error);
+    res.status(500).send('Error deleting product qty');
+  }
+};
+
+
 module.exports = {
   getAllProducts,
-  getProductsByCategory
+  getProductsByCategory,
+  getProductQty,
+  deleteproductQty,
 };

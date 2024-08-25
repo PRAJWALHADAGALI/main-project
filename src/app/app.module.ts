@@ -18,15 +18,19 @@ import { CartListComponent } from './cart-list/cart-list.component';
 import { CartService } from "./services/cart.service";
 import { ProductService } from "./services/product.service";
 import { HeadComponent } from './head/head.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
 import { NewheaderComponent } from './newheader/newheader.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyordersComponent } from './myorders/myorders.component';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import { ButtonModule } from 'primeng/button';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'intro', component: IntroComponent },
   { path: 'productsCategories', component: ProductsCategoriesComponent },
   { path: 'registor', component: RegistorComponent },
@@ -68,12 +72,16 @@ const routes: Routes = [
     HttpClientModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    ToastModule,
+    ButtonModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     ProductService,
     CartService,
     CartListComponent,
+    MessageService
   ],
   bootstrap: [AppComponent],
 })

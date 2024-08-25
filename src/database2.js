@@ -4,7 +4,7 @@ const connection = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: 'Prajwal@123',
-  database: 'productData',
+  database: 'userschema',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
@@ -20,5 +20,6 @@ const db = {
     }),
   end: () => connection.end()
 };
+
 
 module.exports = db;

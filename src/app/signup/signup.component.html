@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
-  </head>
-  <body>
+
     <nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">  <img src="https://thinkhighsoftwares.com/wp-content/uploads/2022/08/For-Dark-BG@3x.png" alt=""></a>
@@ -22,36 +12,52 @@
   </fa-icon>
 </div>
 <div class="for-form">
-  <form class="" action="index.html" method="post">
+  <form [formGroup]="registorFrom" (ngSubmit)="submit()">
     <div class="for-box">
-      <input class="box" type="text" name="name" value="" placeholder="Name"> <br>
-      <input class="box" type="text" name="phone" value="" placeholder="Phone"> <br>
-      <input class="box" type="text" name="email" value="" placeholder="Email Address"> <br>
-      <input class="box" type="text" name="password" value="" placeholder="Password">
+      <input class="box" formControlName="name" type="text" placeholder="Name"> <br>
+      <small *ngIf="name.invalid && name.dirty || name.touched" class="block p-error">
+        <div *ngIf="name.errors?.['required']">
+          Full Name is required
+        </div>
+        <div *ngIf="name.errors?.['pattern']">
+          Full name should be valid
+        </div>
+      </small>
+      <input class="box" formControlName="phone" type="text" placeholder="Phone"> <br>
+      <small *ngIf="phone.dirty || phone.touched" class="block p-error">
+        <div *ngIf="phone.errors?.['required']">
+          Phone number is required
+        </div>
+      </small>
+      <input class="box" formControlName="email" type="text" placeholder="Email Address"> <br>
+      <small *ngIf="email.invalid && email.dirty || email.touched" class="block p-error">
+        <div *ngIf="email.errors?.['required']">
+          Email Address is required
+        </div>
+        <div *ngIf="email.errors?.['email']">
+          Email should be valid
+        </div>
+      </small>
+      <input class="box" formControlName="password" type="password" placeholder="Password">
+      <small *ngIf="password.dirty || password.touched" class="block p-error">
+        <div *ngIf="password.errors?.['required']">
+          Password is required
+        </div>
+      </small>
     </div>
 
     <div class="for-registor">
-      <button [routerLink]="['/login']" class="btn btn-lg btn-primary login-btn" type="button">Signup</button> <br>
+      <button class="btn btn-lg btn-primary login-btn" type="submit">Signup</button> <br>
     </div>
     <div class="other-opt">
       <h4>Or Sign up with</h4>
       <div class="symbols">
-        <a href="#">  <fa-icon [icon]="faFacebook" class="fa-shop">
-
-          </fa-icon></a>
-      <a href="#">  <fa-icon [icon]="faTwitter" class="fa-shop">
-
-        </fa-icon></a>
-      <a href="#">  <fa-icon [icon]="faGoogle" class="fa-shop">
-
-        </fa-icon></a>
+        <a href="#">  <fa-icon [icon]="faFacebook" class="fa-shop"></fa-icon></a>
+        <a href="#">  <fa-icon [icon]="faTwitter" class="fa-shop"></fa-icon></a>
+        <a href="#">  <fa-icon [icon]="faGoogle" class="fa-shop"></fa-icon></a>
         <p>Existing User? <a href="#" [routerLink]="['/login']">Login</a></p>
-
       </div>
     </div>
   </form>
+
 </div>
-
-
-  </body>
-</html>
